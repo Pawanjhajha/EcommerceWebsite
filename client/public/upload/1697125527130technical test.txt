@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+/*---------------------number and hash pattern-----------*/
+function printPattren(rows){
+    for(let i=1;i<=rows;i++){
+        let pattern=""
+        for(let j=1;j<=1;j++ ){
+            if(j%2===0){
+                pattern+="#"
+            }else{
+                pattern += j+" "
+            }
+        }
+        console.log(pattern)
+    }
+}
+printPattren(5)
+
+
+/*----------------------number pattren-----------*/
+let rows=4;
+
+let pattern=""
+    for(let n=1;n<=rows;n++){
+  
+    for(let num=1;num<=6-n;num++){
+        pattern += num
+        
+    }
+    pattern +="\n"
+    
+}
+console.log(pattern)
+
+
+
+
+
+/*------------- reverse the number ------------------*/
+     function reverseNumber(number) {
+  let reversedNumber = 0;
+  while (number !== 0) {
+    const digit = number % 10;
+    reversedNumber = (reversedNumber * 10) + digit;
+    number = Math.floor(number / 10);
+  }
+  return reversedNumber;
+}
+
+// Example usage
+const number = 352;
+const reversedNumber = reverseNumber(number);
+console.log(`The reversed number of ${number} is ${reversedNumber}.`);
+
+
+/*----------------- Swap two number--------------------------*/
+let a = 5;
+let b = 7;
+
+console.log("Before swapping:");
+console.log("a =", a);
+console.log("b =", b);
+
+a = a + b;
+b = a - b;
+a = a - b;
+
+console.log("After swapping:");
+console.log("a =", a);
+console.log("b =", b);
+/*--------domain name parogram--------*/
+function extractDomainFromEmail(email) {
+  const atIndex = email.indexOf("@");
+  if (atIndex !== -1) {
+    const domain = email.substring(atIndex + 1);
+    return domain;
+  }
+  return null; // Return null if no "@" symbol is found
+}
+
+// Example usage
+const email = "admin@gmail.com";
+const domain = extractDomainFromEmail(email);
+console.log("Domain:", domain);
+
+/*-----------------------calculate total amount with gst---------*/
+
+const mobileCost = 5000;
+const gstRate = 0.18;
+
+const gstAmount = mobileCost * gstRate;
+
+
+const totalAmount = mobileCost + gstAmount;
+
+console.log("Mobile Cost: Rs", mobileCost);
+console.log("GST Rate: ", gstRate * 100, "%");
+console.log("GST Amount: Rs", gstAmount);
+console.log("Total Amount: Rs", totalAmount);
+
+    </script>
+
+</body>
+
+</html>
